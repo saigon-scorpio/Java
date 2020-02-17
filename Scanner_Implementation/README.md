@@ -1,0 +1,8 @@
+# CSE 3341 Scanner Implementation using Java
+Nam B Nguyen 
+- Core.java contains enum of constant Core, I added BLANK to represent white space and ERROR to represent error.
+- Main.java is where the program starts, I modified it. I added the ignore part so that BLANK will be ignored. Added the ERROR case to pop up error. 
+- Scanner.java is modified. I added private functions helper and some value. count to keep track of how many words. track for array of Core. dictionary is HashMap of words and it tracking number. placeholder is valid Core with tracking number as array position. checkCha, checkDig, checkSign, checkBlank is boolean function to check valid input I allowed. checkStringDigit is to check whether the words is an Integer Number. digitValue is to transform string to an integer. However, only (0-1023) allowed, otherwise return -1. takingInput is used to get all the characters in the file and transform to HashMap of words. assignCore is taking words value in the HashMap before to add its Core value.
+- INSTRUCTION TO RUN: just like in the main function, javac *.java then java Main filename (whatever test filename we want here. example: test.txt). 
+- Special features and comments are already explained above. I SPECIFICALLY want the CORE.BLANK in my function because I think it will be helpful when I try to implement the PARSER since I can SEPARATE cases like 123abc and 123 abc. 123abc will be CONST[123]->ID[abc] while 123 abc will be CONST[123]->BLANK->ID[abc]. It wouldn't show up like that when we test it with the main since I tripped out the blank. However, in my Core Array, it will be like that.
+- No bugs that I could find YET.
